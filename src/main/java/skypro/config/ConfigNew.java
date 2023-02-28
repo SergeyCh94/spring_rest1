@@ -24,7 +24,7 @@ public class ConfigNew {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         try {
             dataSource.setDriverClass("org.postgresql.Driver");
-            dataSource.setJdbcUrl("jdbc:postgresql://localhost:5432/skypro");
+            dataSource.setJdbcUrl("jdbc:postgresql://localhost/skypro");
             dataSource.setUser("postgres");
             dataSource.setPassword("160894Sveta");
         } catch (PropertyVetoException e) {
@@ -42,6 +42,7 @@ public class ConfigNew {
         Properties properties = new Properties();
         properties.setProperty("dialect", "org.hibernate.dialect.PostgreSQLDialect");
         properties.setProperty("show_sql", "true");
+        properties.setProperty("hibernate.ddl.auto", "create");
 
         sessionFactory.setHibernateProperties(properties);
 

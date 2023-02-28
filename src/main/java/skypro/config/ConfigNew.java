@@ -42,7 +42,6 @@ public class ConfigNew {
         Properties properties = new Properties();
         properties.setProperty("dialect", "org.hibernate.dialect.PostgreSQLDialect");
         properties.setProperty("show_sql", "true");
-        properties.setProperty("hibernate.ddl.auto", "create");
 
         sessionFactory.setHibernateProperties(properties);
 

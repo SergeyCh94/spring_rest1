@@ -11,20 +11,20 @@ public class Employee {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "name")
-    private String name;
-
     @Column(name = "department")
     private String department;
 
-    @Column(name = "selary")
-    private double salary;
+    @Column(name = "name")
+    private String name;
 
-    public Employee(int id, String name, String department, double salary) {
+    @Column(name = "selary")
+    private double selary;
+
+    public Employee(int id, String name, String department, double selary) {
         this.id = id;
         this.name = name;
         this.department = department;
-        this.salary = salary;
+        this.selary = selary;
     }
 
     public Employee() {
@@ -56,10 +56,10 @@ public class Employee {
     }
 
     public double getSalary() {
-        return salary;
+        return selary;
     }
 
     public void setSalary(double salary) {
-        this.salary = salary;
+        this.selary = salary;
     }
 }
